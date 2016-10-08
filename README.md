@@ -5,4 +5,4 @@ setup a guitar audio effects with a raspberry-pi and a mobile for remote control
 
 [French instructions](Setup_fr.md) - English instructions coming soon
 
-Un grand merci à [GuitarExtended](https://guitarextended.wordpress.com) pour l'inspiration !
+Thanks to [GuitarExtended](https://guitarextended.wordpress.com) and [MobMuPlat](http://danieliglesia.com/mobmuplat/) for the inspiration!
