@@ -21,9 +21,9 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo rapsi-config
 ```
-Se baser sur [cette page] (http://www.framboise314.fr/configurer-la-framboise314-le-premier-demarrage-du-raspberry-pi-il-est-vivant/) pour configurer le démarrage en mode graphique sans mot de passe 
+6. Se baser sur [cette page] (http://www.framboise314.fr/configurer-la-framboise314-le-premier-demarrage-du-raspberry-pi-il-est-vivant/) pour configurer le démarrage en mode graphique sans mot de passe 
 
-6. Taper les instructions suivantes pour installer pure-data :
+7. Taper les instructions suivantes pour installer pure-data :
 ```bash
 sudo apt-get install puredata
 cd
@@ -33,9 +33,9 @@ tar -xvf mapping-0.2.1.tar.gz
 sudo mv mapping-0.2.1 /usr/lib/puredata/mapping
 ```
 
-7. Activer le wifi et se connecter à votre wifi en se basant sur [cette page](http://the-raspberry.com/wifi-config)
+8. Activer le wifi et se connecter à votre wifi en se basant sur [cette page](http://the-raspberry.com/wifi-config)
 
-8. Taper les instructions suivantes pour installer les effets
+9. Taper les instructions suivantes pour installer les effets
 ```bash
 wget https://github.com/jpca/rasp-effects/archive/master.zip
 unzip master.zip
@@ -43,7 +43,7 @@ mkdir /home/pi/Documents/rasp-effects
 cp rasp-effects-master/raspberry/patches/*.pd /home/pi/Documents/rasp-effects
 ```
 
-9. Taper les instructions suivantes pour lancer pure-data et un patch au démarrage
+10. Taper les instructions suivantes pour lancer pure-data et un patch au démarrage
 ```bash
 cat <<EOT >> /home/pi/.config/lxsession/LXDE-pi/autostart
 @pd /home/pi/Documents/rasp-effects/RaspGuitar-WhaAuto.pd
