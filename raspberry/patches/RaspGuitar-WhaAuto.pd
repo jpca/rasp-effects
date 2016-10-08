@@ -1,0 +1,110 @@
+#N canvas 115 105 1274 699 10;
+#X obj 105 623 vcf~;
+#X obj 74 104 adc~;
+#X obj 100 726 dac~;
+#X floatatom 153 548 5 0 0 0 - - -;
+#X obj 147 410 vsl 15 128 0 20 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3366 1;
+#X obj 133 129 +~ 1;
+#X obj 134 150 *~ 0.5;
+#X obj 134 97 osc~ 2;
+#X obj 281 122 hsl 128 15 700 6000 0 0 empty empty Max_freq_range -2
+-8 0 10 -262144 -1 -1 0 1;
+#X obj 208 256 hsl 128 15 0 700 0 0 empty empty Min_freq_range -2 -8
+0 10 -262144 -1 -1 0 1;
+#X floatatom 210 278 6 0 0 0 - - -;
+#X floatatom 244 213 6 0 0 0 - - -;
+#X obj 224 186 -;
+#X obj 196 150 bang;
+#X obj 129 348 +~ 200;
+#X obj 134 189 *~ 1500;
+#X obj 136 51 hsl 128 15 0.5 4 0 0 empty empty LFO -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 178 366 loadbang;
+#X msg 173 393 5.3;
+#X obj 979 7 loadbang;
+#X msg 974 40 \; pd dsp 1;
+#X text 449 646 Credits: inspired by GuitarExtended-WhaAuto \, https://guitarextended.wordpress.com/.
+Thanks Pierre Masset!;
+#X msg 744 -33 status;
+#X text 324 -39 WhaAuto for rasp-guitar. Params:;
+#X text 168 462 filter sharpness;
+#X obj 749 3 mrpeach/udpreceive 1234;
+#X obj 114 673 *~ 2;
+#X obj 292 544 vsl 15 128 0 127 0 0 empty empty volume 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 210 691 5 0 0 0 - - -;
+#X obj 695 102 mrpeach/unpackOSC;
+#X obj 364 257 unpack 0 0;
+#X obj 849 99 tgl 15 0 empty empty log_Debug 17 7 0 10 -4034 -1 -1
+0 1;
+#X obj 766 133 spigot;
+#X obj 766 167 print received osc;
+#X obj 320 655 * 10;
+#X obj 159 72 mapping/autoscale 0.5 4;
+#X obj 170 492 mapping/autoscale 0 20;
+#X floatatom 88 77 5 0 0 0 - - -;
+#X obj 304 152 mapping/autoscale 700 6000;
+#X obj 188 321 mapping/autoscale 0 700;
+#X obj 797 272 unpack 0 0 0 0;
+#X obj 712 340 print unused;
+#X text 319 10 /multiSlider 1: Max freq range \, 2: Min freq range
+;
+#X text 321 -18 /volume: gain level \; /xySlider x: LFO \, y: filter
+sharpness;
+#X obj 669 188 route /volume /xySlider /compass /multiSlider /tilts
+/effect /track;
+#X obj 930 352 print effect \$1;
+#X obj 1108 279 print track \$1;
+#X obj 1122 325 readsf~;
+#X msg 964 311 open ./track/1.aiff;
+#X obj 951 403 readsfv~;
+#X connect 0 0 26 0;
+#X connect 1 0 0 0;
+#X connect 4 0 3 0;
+#X connect 4 0 0 2;
+#X connect 5 0 6 0;
+#X connect 6 0 15 0;
+#X connect 7 0 5 0;
+#X connect 8 0 12 0;
+#X connect 9 0 10 0;
+#X connect 9 0 12 1;
+#X connect 9 0 13 0;
+#X connect 9 0 14 1;
+#X connect 12 0 11 0;
+#X connect 12 0 15 1;
+#X connect 13 0 12 0;
+#X connect 14 0 0 1;
+#X connect 15 0 14 0;
+#X connect 16 0 7 0;
+#X connect 16 0 37 0;
+#X connect 17 0 18 0;
+#X connect 18 0 4 0;
+#X connect 19 0 20 0;
+#X connect 22 0 25 0;
+#X connect 25 0 29 0;
+#X connect 26 0 2 0;
+#X connect 26 0 2 1;
+#X connect 27 0 28 0;
+#X connect 28 0 26 1;
+#X connect 29 0 32 0;
+#X connect 29 0 44 0;
+#X connect 30 0 35 0;
+#X connect 30 1 36 0;
+#X connect 31 0 32 1;
+#X connect 32 0 33 0;
+#X connect 34 0 26 1;
+#X connect 35 0 7 0;
+#X connect 36 0 0 2;
+#X connect 38 0 12 0;
+#X connect 39 0 14 1;
+#X connect 40 0 38 0;
+#X connect 40 1 39 0;
+#X connect 44 0 34 0;
+#X connect 44 1 30 0;
+#X connect 44 2 41 0;
+#X connect 44 3 40 0;
+#X connect 44 4 30 0;
+#X connect 44 5 45 0;
+#X connect 44 6 46 0;
+#X connect 44 6 47 0;
