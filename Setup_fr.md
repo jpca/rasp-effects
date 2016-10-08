@@ -5,7 +5,13 @@
 - 1 Raspberry-pi 3 et son alimentation
 - 1 Carte SD-micro 8 gb
 - 1 Carte son USB comme [celle-ci](https://www.amazon.fr/CSL-Surround-dynamique-fonctionnelles-comprises/dp/B00NXUZARM/ref=sr_1_1?s=electronics&amp;ie=UTF8&amp;qid=1473490479&amp;sr=1-1&amp;keywords=carte+son)
-- Un écran HDMI, un clavier usb, une souris usb
+- 1 écran HDMI, un clavier usb, une souris usb pour la configuration et les changements
+- 2 cables jack 3.5 male-male (l'un de moins d'1m et l'autre de plus de 2m)  
+- 1 adaptateur jack male 3.5 - 6.15
+
+## Pour une installation montée sur une guitare
+- 1 batterie usb 2.1A
+- un système de fixation adhoc 
 
 # Installation
 
