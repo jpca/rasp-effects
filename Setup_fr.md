@@ -5,13 +5,21 @@
 - 1 Raspberry-pi 3 et son alimentation
 - 1 Carte SD-micro 8 gb
 - 1 Carte son USB comme [celle-ci](https://www.amazon.fr/CSL-Surround-dynamique-fonctionnelles-comprises/dp/B00NXUZARM/ref=sr_1_1?s=electronics&amp;ie=UTF8&amp;qid=1473490479&amp;sr=1-1&amp;keywords=carte+son)
-- 1 écran HDMI, un clavier usb, une souris usb pour la configuration et les changements
+- 1 écran HDMI, un clavier usb, une souris usb pour l'installation et les changements de configuration
 - 2 cables jack 3.5 male-male (l'un de moins d'1m et l'autre de plus de 2m)  
 - 1 adaptateur jack male 3.5 - 6.15
 
-## Pour une installation montée sur une guitare
+## Pour une installation montée sur une guitare 
+(facultatif)
 - 1 batterie usb 2.1A
 - un système de fixation adhoc 
+
+## Pour le controle à distance 
+(facultatif)
+il faudra brancher 1 écran HDMI, un clavier usb, une souris usb les changements de configuration)
+- 1 smartphone Android ou un iPhone
+- l'application MobMuPlat
+
 
 # Installation
 
@@ -62,3 +70,8 @@ sudo cat <<EOT >> /etc/modprobe.d/8192cu.conf
 options 8192cu rtw\_power\_mgnt=0 rtw\_enusbss=
 EOT
 ```
+## Installation du controle à distance
+(facultatif)
+1. Télécharger MobMuPlat - [Android](https://play.google.com/store/apps/details?id=com.iglesiaintermedia.mobmuplat) - [iPhone](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=597679399&mt=8)
+2. Installer l'[interface MobMuPlat](mobile/mobmupla) comme expliqué [ici](http://danieliglesia.com/mobmuplat/doc/index.htm)
+3. Configurer le rapsberry-pi et le smartphone sur le même wifi (la communication se fera ensuite automatiquement par broadcast UDP).
